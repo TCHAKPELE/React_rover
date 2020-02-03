@@ -91,7 +91,6 @@ function update(rover, liste_action) {
 
 function modify_direction(orientation) {
 
-
    
 
     var sens = { 'N': 0, 'E': 1, 'S': 2, 'O':3  };
@@ -172,7 +171,7 @@ function App() {
                         
 
                     />
-                    <input type="button" value="Deplacer" onClick={() => { console.log((modify_direction(nextrover.orientation))); setSens(modify_direction(nextrover.orientation)); setRover( encaspsulation(state,nextrover))}} />
+                    <input type="button" value="Deplacer" onClick={() => { console.log((modify_direction(state))); setSens(modify_direction(encaspsulation(state, nextrover).orientation)); setRover( encaspsulation(state,nextrover))}} />
 
 
                 </form>
